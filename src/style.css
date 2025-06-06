@@ -1,0 +1,67 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Applying Montserrat globally */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.boton-es{
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    padding: 10px 30px 10px 30px;
+    font-weight: 600;
+    background: #092430;
+    color: #fff;
+    border-radius: 30px;
+    border: 1px solid #00625C;
+    position: relative;
+    z-index: 1;
+}
+
+.boton-retirar {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(0, 223, 130, 0.8) 0%, rgba(0, 223, 130, 0.5) 20%, rgba(0, 223, 130, 0.8) 40%, rgba(0, 223, 130, 0.5) 60%, rgba(0, 223, 130, 0.8) 80%, rgba(0, 223, 130, 0.5) 100%);
+    background-size: 200% auto;
+    color: white;
+    transition: background-position 0.5s ease;
+}
+
+.boton-retirar:hover {
+    background-position: right center;
+}
+
+/* Optional: Add a subtle pseudo-element for a more pronounced flare effect if needed */
+/*
+.boton-retirar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.boton-retirar:hover::before {
+    left: 100%;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

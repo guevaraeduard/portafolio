@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduard Guevara | Desarrollador Web</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#181818] text-white font-['Montserrat',sans-serif]">
+  <!-- Header -->
+  <header class="w-full px-4 sm:px-6 md:px-16 py-6 flex flex-col md:flex-row items-center justify-between bg-[#181818] gap-4 md:gap-0 relative">
+    <!-- Botón hamburguesa solo en móvil -->
+    <button id="menuButton" class="md:hidden absolute left-4 top-6 z-30 p-2 rounded-lg hover:bg-[#232323] focus:outline-none">
+      <i class="bi bi-list text-3xl text-[#ff8000]"></i>
+    </button>
+    <!-- Overlay para móvil -->
+    <div id="overlay" class="fixed inset-0 bg-black/60 z-20 hidden"></div>
+    <div class="flex items-center gap-2 mb-4 md:mb-0">
+      <img src="../assets/images/logo.png" alt="Logo" class="w-full h-auto">
+    </div>
+    <nav id="mainNav" class="flex-col md:flex-row flex gap-8 text-sm font-medium fixed md:static top-0 left-0 w-2/3 max-w-lg h-full bg-[#181818] md:bg-transparent z-30 md:z-auto p-8 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out md:flex md:items-center md:justify-center md:w-auto md:h-auto md:gap-8 md:relative">
+      <button id="closeButton" class="md:hidden absolute top-4 right-4 p-2 rounded-lg hover:bg-[#232323] focus:outline-none">
+        <i class="bi bi-x-lg text-2xl text-[#ff8000]"></i>
+      </button>
+      <a href="#" class="text-[#ff8000]">Inicio</a>
+      <a href="#experiencias" class="hover:text-[#ff8000] transition">Experiencias</a>
+      <a href="#sobre-mi" class="hover:text-[#ff8000] transition">Sobre Mi</a>
+      <a href="#portafolio" class="hover:text-[#ff8000] transition">Portafolio</a>
+      <a href="#contacto" class="hover:text-[#ff8000] transition">Contacto</a>
+    </nav>
+    <a href="#contacto" class="ml-0 md:ml-8 mt-4 md:mt-0 px-6 py-2 bg-[#ff8000] text-white rounded-md font-semibold hover:bg-[#ff9900] transition">Contáctame</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="w-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 py-10 md:py-20 bg-[#181818] gap-10 md:gap-0">
+    <div class="flex-1 flex flex-col gap-4 text-center md:text-left items-center md:items-start">
+      <span class="text-sm text-gray-400">Hola yo soy</span>
+      <h1 class="text-lg font-bold text-[#959595]">Eduard Guevara</h1>
+      <h1 class="text-3xl md:text-5xl font-bold text-[#ff8000]">Desarrollador WEB</h1>
+      <div class="flex gap-4 mt-2 justify-center md:justify-start">
+        <a href="https://www.facebook.com/eduard.guevara.cristovive/" target="_blank" class="text-gray-400 hover:text-[#ff8000]"><i class="bi bi-facebook text-xl"></i></a>
+        <a href="https://github.com/guevaraeduard" target="_blank" class="text-gray-400 hover:text-[#ff8000]"><i class="bi bi-github text-xl"></i></a>
+        <a href="https://www.instagram.com/guevaraeduard/" target="_blank" class="text-gray-400 hover:text-[#ff8000]"><i class="bi bi-instagram text-xl"></i></a>
+      </div>
+      <div class="flex gap-4 mt-6 justify-center md:justify-start flex-wrap">
+        <a href="#contacto" class="px-6 py-2 bg-[#ff8000] text-white rounded-md font-semibold hover:bg-[#ff9900] transition">Contrátame</a>
+        <a href="#sobre-mi" class="px-6 py-2 border border-[#ff8000] text-[#ff8000] rounded-md font-semibold hover:bg-[#ff8000] hover:text-white transition">Saber Más</a>
+      </div>
+      <div class="flex gap-8 mt-8 justify-center md:justify-start flex-wrap bg-[#232323] p-4 rounded-lg">
+        <div class="flex flex-col items-center">
+          <span class="text-lg font-bold text-[#ff8000]">3+</span>
+          <span class="text-xs text-gray-400">Experiencias</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-lg font-bold text-[#ff8000]">20+</span>
+          <span class="text-xs text-gray-400">Proyectos terminados</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-lg font-bold text-[#ff8000]">10+</span>
+          <span class="text-xs text-gray-400">Clientes</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 flex justify-center mt-8 md:mt-0">
+      <div class="relative flex items-end justify-center w-60 h-80 xs:w-72 xs:h-96 sm:w-80 sm:h-[28rem] md:w-[28rem] md:h-[34rem]">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-60 h-60 xs:w-72 xs:h-72 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] rounded-full bg-[#232323] z-0"></div>
+        <img src="../assets/images/photo.png" alt="Eduard Guevara" class="relative z-10 grayscale w-56 xs:w-64 sm:w-72 md:w-80 lg:w-[22rem] xl:w-[24rem] h-auto drop-shadow-2xl" style="object-fit: contain; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencias -->
+  <section id="experiencias" class="w-full px-4 sm:px-6 md:px-16  bg-[#181818]">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Experiencias</h2>
+    <p class="text-center text-gray-400 mb-0 text-sm md:text-base">A lo largo de mi carrera he trabajado en proyectos de desarrollo web, diseño de aplicaciones móviles y soluciones a medida para clientes de diferentes sectores. </p>
+      <p class="text-center text-gray-400 mb-8 md:mb-10 text-sm md:text-base"> Mi enfoque es crear experiencias digitales intuitivas, modernas y funcionales.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="bg-[#232323] rounded-lg p-8 flex flex-col items-center">
+        <i class="bi bi-laptop text-4xl text-[#ff8000] mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Desarrollo Web</h3>
+        <p class="text-sm text-gray-400 text-center">He desarrollado sitios web corporativos, landing pages y tiendas online con tecnologías modernas como Vue.js, Next.js, Laravel, Inertia y Tailwind CSS, priorizando la experiencia de usuario y el rendimiento.</p>
+      </div>
+      <div class="bg-[#232323] rounded-lg p-8 flex flex-col items-center">
+        <i class="bi bi-phone text-4xl text-[#ff8000] mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Aplicaciones Móviles</h3>
+        <p class="text-sm text-gray-400 text-center">Experiencia en diseño y desarrollo de apps móviles con Ionic y Flutter, desde la idea inicial hasta la publicación en tiendas.</p>
+      </div>
+      <div class="bg-[#232323] rounded-lg p-8 flex flex-col items-center">
+        <i class="bi bi-people text-4xl text-[#ff8000] mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Trabajo en Equipo</h3>
+        <p class="text-sm text-gray-400 text-center">Colaboración en equipos multidisciplinarios aplicando metodologías ágiles, comunicación efectiva y enfoque en la entrega de valor al cliente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Mi -->
+  <section id="sobre-mi" class="w-full px-4 sm:px-6 md:px-16 py-12 md:py-16 bg-[#181818] flex flex-col md:flex-row items-center gap-10 md:gap-12">
+    <div class="flex-1 flex justify-center mb-8 md:mb-0">
+      <div class="relative flex items-end justify-center w-60 h-80 xs:w-72 xs:h-96 sm:w-80 sm:h-[28rem] md:w-[28rem] md:h-[34rem]">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-60 h-60 xs:w-72 xs:h-72 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] rounded-full bg-[#232323] z-0"></div>
+        <img src="../assets/images/photo.png" alt="Eduard Guevara" class="relative z-10 grayscale w-56 xs:w-64 sm:w-72 md:w-80 lg:w-[22rem] xl:w-[24rem] h-auto drop-shadow-2xl" style="object-fit: contain; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col gap-4 text-center md:text-left items-center md:items-start">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Sobre Mí</h2>
+      <span class="text-sm text-gray-400 mb-2">Desarrollador Web & Mobile | UI/UX | Freelancer</span>
+      <p class="text-gray-300 text-sm md:text-base mb-4">Soy un apasionado desarrollador web y móvil con más de 3 años de experiencia creando soluciones digitales a medida. Me especializo en el desarrollo de interfaces modernas, optimizadas y accesibles, utilizando tecnologías como Vue.js, Laravel, Inertia, Tailwind CSS, Ionic y Flutter. Disfruto colaborar con equipos multidisciplinarios y transformar ideas en productos funcionales que generan impacto real. Siempre busco aprender nuevas herramientas y tendencias para ofrecer lo mejor a mis clientes.</p>
+      <a href="#portafolio" class="px-6 py-2 bg-[#ff8000] text-white rounded-md font-semibold hover:bg-[#ff9900] transition w-max">SABER MÁS</a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="w-full px-4 sm:px-6 md:px-16 py-10 md:py-12 bg-[#181818] flex flex-wrap justify-center gap-10 md:gap-16">
+    <a href="https://vuejs.org/" target="_blank" class="flex flex-col items-center group hover:scale-105 transition-transform duration-200">
+      <div class="relative w-24 h-24 flex items-center justify-center mb-3">
+        <svg class="absolute top-0 left-0" width="96" height="96">
+          <circle cx="48" cy="48" r="42" stroke="#232323" stroke-width="7" fill="none" />
+          <circle cx="48" cy="48" r="42" stroke="#ff8000" stroke-width="7" fill="none" stroke-dasharray="264" stroke-dashoffset="0" stroke-linecap="round" />
+        </svg>
+        <img src="../assets/images/vue.png" alt="Vue.js" class="w-16 h-16 relative z-10 rounded-full" title="Vue.js">
+      </div>
+      <span class="font-bold text-[#ff8000] text-lg">Vue.js</span>
+      <span class="text-sm text-gray-400">100%</span>
+    </a>
+    <a href="https://laravel.com/" target="_blank" class="flex flex-col items-center group hover:scale-105 transition-transform duration-200">
+      <div class="relative w-24 h-24 flex items-center justify-center mb-3">
+        <svg class="absolute top-0 left-0" width="96" height="96">
+          <circle cx="48" cy="48" r="42" stroke="#232323" stroke-width="7" fill="none" />
+          <circle cx="48" cy="48" r="42" stroke="#ff8000" stroke-width="7" fill="none" stroke-dasharray="264" stroke-dashoffset="0" stroke-linecap="round" />
+        </svg>
+        <img src="../assets/images/laravel.png" alt="Laravel" class="w-16 h-16 relative z-10  rounded-full" title="Laravel">
+      </div>
+      <span class="font-bold text-[#ff8000] text-lg">Laravel</span>
+      <span class="text-sm text-gray-400">100%</span>
+    </a>
+    <a href="https://inertiajs.com/" target="_blank" class="flex flex-col items-center group hover:scale-105 transition-transform duration-200">
+      <div class="relative w-24 h-24 flex items-center justify-center mb-3">
+        <svg class="absolute top-0 left-0" width="96" height="96">
+          <circle cx="48" cy="48" r="42" stroke="#232323" stroke-width="7" fill="none" />
+          <circle cx="48" cy="48" r="42" stroke="#ff8000" stroke-width="7" fill="none" stroke-dasharray="264" stroke-dashoffset="39" stroke-linecap="round" />
+        </svg>
+        <img src="../assets/images/inertia.png" alt="Inertia.js" class="w-16 h-16 relative z-10 rounded-full" title="Inertia.js">
+      </div>
+      <span class="font-bold text-[#ff8000] text-lg">Inertia.js</span>
+      <span class="text-sm text-gray-400">85%</span>
+    </a>
+    <a href="https://tailwindcss.com/" target="_blank" class="flex flex-col items-center group hover:scale-105 transition-transform duration-200">
+      <div class="relative w-24 h-24 flex items-center justify-center mb-3">
+        <svg class="absolute top-0 left-0" width="96" height="96">
+          <circle cx="48" cy="48" r="42" stroke="#232323" stroke-width="7" fill="none" />
+          <circle cx="48" cy="48" r="42" stroke="#ff8000" stroke-width="7" fill="none" stroke-dasharray="264" stroke-dashoffset="105" stroke-linecap="round" />
+        </svg>
+        <img src="../assets/images/tailwind.png" alt="Tailwind CSS" class="w-16 h-16 relative z-10 rounded-full" title="Tailwind CSS">
+      </div>
+      <span class="font-bold text-[#ff8000] text-lg">Tailwind CSS</span>
+      <span class="text-sm text-gray-400">60%</span>
+    </a>
+    <a href="https://ionicframework.com/" target="_blank" class="flex flex-col items-center group hover:scale-105 transition-transform duration-200">
+      <div class="relative w-24 h-24 flex items-center justify-center mb-3">
+        <svg class="absolute top-0 left-0" width="96" height="96">
+          <circle cx="48" cy="48" r="42" stroke="#232323" stroke-width="7" fill="none" />
+          <circle cx="48" cy="48" r="42" stroke="#ff8000" stroke-width="7" fill="none" stroke-dasharray="264" stroke-dashoffset="79" stroke-linecap="round" />
+        </svg>
+        <img src="../assets/images/ionic.png" alt="Ionic" class="w-16 h-16 relative z-10  rounded-full" title="Ionic">
+      </div>
+      <span class="font-bold text-[#ff8000] text-lg">Ionic</span>
+      <span class="text-sm text-gray-400">70%</span>
+    </a>
+    <a href="https://flutter.dev/" target="_blank" class="flex flex-col items-center group hover:scale-105 transition-transform duration-200">
+      <div class="relative w-24 h-24 flex items-center justify-center mb-3">
+        <svg class="absolute top-0 left-0" width="96" height="96">
+          <circle cx="48" cy="48" r="42" stroke="#232323" stroke-width="7" fill="none" />
+          <circle cx="48" cy="48" r="42" stroke="#ff8000" stroke-width="7" fill="none" stroke-dasharray="264" stroke-dashoffset="150" stroke-linecap="round" />
+        </svg>
+        <img src="../assets/images/flutter.png" alt="Flutter" class="w-16 h-16 relative z-10  rounded-full" title="Flutter">
+      </div>
+      <span class="font-bold text-[#ff8000] text-lg">Flutter</span>
+      <span class="text-sm text-gray-400">50%</span>
+    </a>
+  </section>
+
+  <!-- Portafolio -->
+  <section id="portafolio" class="w-full px-4 sm:px-6 md:px-16 py-12 md:py-16 bg-[#181818]">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">Portafolio</h2>
+    <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-6 md:mb-8">
+      <button id="tab-web" class="px-4 py-2 rounded bg-[#ff8000] text-white font-semibold text-xs md:text-base">Diseño De Sitios Web</button>
+      <button id="tab-mobile" class="px-4 py-2 rounded bg-[#232323] text-white font-semibold text-xs md:text-base">Aplicaciones Móviles</button>
+    </div>
+    <!-- Carrusel -->
+    <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
+      <div class="relative w-full h-64 sm:h-80 md:h-96 bg-[#232323] rounded-lg flex items-center justify-center overflow-hidden">
+        <button id="carousel-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-[#181818] bg-opacity-70 hover:bg-[#ff8000] text-white rounded-full p-2 z-10 transition"><i class="bi bi-chevron-left text-2xl"></i></button>
+        <div id="carousel-images" class="w-full h-full flex transition-transform duration-500">
+          <img src="../assets/images/portfolio1.png" alt="Proyecto 1" class="object-contain w-full h-full rounded-lg" />
+          <img src="../assets/images/portfolio2.png" alt="Proyecto 2" class="object-contain w-full h-full rounded-lg" />
+          <img src="../assets/images/portfolio3.png" alt="Proyecto 3" class="object-contain w-full h-full rounded-lg" />
+        </div>
+        <button id="carousel-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-[#181818] bg-opacity-70 hover:bg-[#ff8000] text-white rounded-full p-2 z-10 transition"><i class="bi bi-chevron-right text-2xl"></i></button>
+      </div>
+      <div id="carousel-dots" class="flex gap-2 mt-4"></div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="w-full px-4 sm:px-6 md:px-16 py-12 md:py-16 bg-[#181818]">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Contacto</h2>
+    <p class="text-center text-gray-400 mb-6 md:mb-8 text-sm md:text-base">Cultivating Connections: Reach Out And Connect With Me</p>
+    <form class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+      <input type="text" placeholder="Name" class="bg-[#232323] rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#ff8000] text-sm md:text-base">
+      <input type="email" placeholder="Email" class="bg-[#232323] rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#ff8000] text-sm md:text-base">
+      <input type="text" placeholder="Phone Number" class="bg-[#232323] rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#ff8000] text-sm md:text-base">
+      <select class="bg-[#232323] rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#ff8000] text-sm md:text-base">
+        <option>Service Of Interest</option>
+        <option>Web Design</option>
+        <option>App Design</option>
+        <option>Branding</option>
+      </select>
+      <input type="text" placeholder="Timeline" class="bg-[#232323] rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#ff8000] text-sm md:text-base sm:col-span-2 md:col-span-1">
+      <textarea placeholder="Project Details.." class="bg-[#232323] rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#ff8000] text-sm md:text-base sm:col-span-2 md:col-span-1"></textarea>
+      <div class="sm:col-span-2 md:col-span-2 flex justify-end">
+        <button type="submit" class="px-6 py-2 md:px-8 bg-[#232323] border border-[#ff8000] text-[#ff8000] rounded-md font-semibold hover:bg-[#ff8000] hover:text-white transition text-sm md:text-base">Send</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#181818] text-white py-8 mt-12 border-t border-[#232323]">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 px-4 sm:px-6 md:px-16">
+      <div class="flex items-center gap-2">
+        <img src="../assets/images/logo.png" alt="Logo" class="w-full h-auto">
+      </div>
+      <nav class="flex flex-wrap justify-center gap-4 md:gap-6">
+        <a href="#" class="text-sm hover:text-[#ff8000] transition-colors">Inicio</a>
+        <a href="#experiencias" class="text-sm hover:text-[#ff8000] transition-colors">Experiencias</a>
+        <a href="#sobre-mi" class="text-sm hover:text-[#ff8000] transition-colors">Sobre Mi</a>
+        <a href="#portafolio" class="text-sm hover:text-[#ff8000] transition-colors">Portafolio</a>
+        <a href="#contacto" class="text-sm hover:text-[#ff8000] transition-colors">Contacto</a>
+      </nav>
+      <div class="flex gap-4">
+        <a href="https://www.facebook.com/eduard.guevara.cristovive/" class="text-xl hover:text-[#ff8000] transition-colors"><i class="bi bi-facebook"></i></a>
+        <a href="https://github.com/guevaraeduard" target="_blank" class="text-xl hover:text-[#ff8000] transition-colors"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/guevaraeduard/" target="_blank" class="text-xl hover:text-[#ff8000] transition-colors"><i class="bi bi-instagram"></i></a>
+        
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-[#232323] text-center text-sm text-gray-400">
+      Eduard@email.com &nbsp; | &nbsp; +58 4142385466 <br>
+      Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Al final del body, antes de </body> -->
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
