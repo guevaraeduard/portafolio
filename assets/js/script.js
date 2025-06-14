@@ -22,17 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // Carrusel Portafolio
 const imagesWeb = [
-    '../assets/images/laravel.png',
-    '../assets/images/vue.png',
-    '../assets/images/inertia.png',
-    '../assets/images/tailwind.png',
-    '../assets/images/ionic.png',
-    '../assets/images/flutter.png'
+    './assets/images/bombero.png',
+    './assets/images/callejero.png',
+    './assets/images/casa.png',
+    '/assets/images/gafas.png',
 ];
 const imagesMobile = [
-    '../assets/images/logo.png',
-    '../assets/images/logo.png',
-    '../assets/images/logo.png'
+    '../assets/images/laravel.png',
+    '../assets/images/vue.png',
+    '../assets/images/inertia.png'
 ];
 let currentTab = 'web';
 let currentIndex = 0;
