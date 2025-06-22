@@ -1,0 +1,173 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#notification-container {
+    min-height: 1.5rem;
+}
+#notification-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: all 1s ease-in-out;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+#sidebar[data-collapsed="true"] .sidebar-text {
+    display: none;
+}
+#sidebar[data-collapsed="true"] {
+    width: 5rem !important;
+}
+#sidebar[data-collapsed="true"] + main {
+    margin-left: 5rem !important;
+}
+#sidebar[data-collapsed="false"] {
+    width: 16rem !important;
+}
+#sidebar[data-collapsed="false"] + main {
+    margin-left: 16rem !important;
+}
+}
+
+/* Mobile styles */
+@media (max-width: 1023px) {
+#sidebar {
+    width: 16rem !important;
+}
+#sidebar + main {
+    margin-left: 0 !important;
+}
+#sidebar .sidebar-text {
+    display: block !important;
+}
+}
+
+/* select tipo de recarga */
+select {
+    font-weight: 600 !important;
+    color: #ffffff !important;
+  }
+  select option {
+    font-weight: 600 !important;
+    color: #333333 !important;
+  }
+  .select-icon {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+  .select-container {
+    position: relative;
+  }
+  .select-container select {
+    padding-left: 2.75rem;
+  }
+
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Curved lines background for Login Page */
+.curved-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.curved-line {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.top-left {
+    background-color: #FDBC23;
+    width: 600px;
+    height: 600px;
+    top: -250px;
+    left: -250px;
+}
+
+.bottom-right {
+    background-color: #FDBC23;
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    right: -100px;
+    opacity: 0.5;
+}
+
+.top-right-secondary {
+    background-color: #7B0000;
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    opacity: 0.3;
+}
+
+.bottom-left-secondary {
+    background-color: #FDBC23;
+    width: 700px;
+    height: 700px;
+    bottom: -300px;
+    left: -300px;
+    opacity: 0.4;
+}
+
+@media (max-width: 640px) {
+    .top-left {
+        width: 400px;
+        height: 400px;
+        top: -200px;
+        left: -200px;
+    }
+    .bottom-right {
+        width: 600px;
+        height: 600px;
+        bottom: -300px;
+        right: -300px;
+    }
+    .top-right-secondary {
+        width: 250px;
+        height: 250px;
+        top: -50px;
+        right: -50px;
+    }
+    .bottom-left-secondary {
+        width: 450px;
+        height: 450px;
+        bottom: -200px;
+        left: -200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
