@@ -21,5 +21,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make('12345678'),
         ]);
+
+        // Ejecutar el seeder de contactos
+        $this->call([
+            ContactSeeder::class,
+            PortfolioSeeder::class,
+        ]);
     }
 }

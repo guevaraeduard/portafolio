@@ -1,61 +1,179 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Portafolio Personal - Eduard Guevara
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="public/assets/images/logo.png" alt="Logo" width="200">
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>Portafolio personal desarrollado con Laravel, Vue.js y Tailwind CSS</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Descripción
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Este es mi portafolio personal donde muestro mis proyectos, habilidades y experiencia como desarrollador web. La aplicación está construida con tecnologías modernas y ofrece una interfaz elegante y responsiva para presentar mi trabajo profesional.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ Características
 
-## Learning Laravel
+- **Diseño Responsivo**: Optimizado para dispositivos móviles, tablets y desktop
+- **Interfaz Moderna**: Diseño limpio y profesional con animaciones suaves
+- **Gestión de Proyectos**: Panel de administración para gestionar proyectos del portafolio
+- **Sistema de Contacto**: Formulario de contacto funcional con notificaciones
+- **Autenticación**: Sistema de login para administración
+- **SEO Optimizado**: Meta tags y estructura semántica
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Tecnologías Utilizadas
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Backend
+- **Laravel 12** - Framework PHP
+- **PHP 8.2+** - Lenguaje de programación
+- **MySQL** - Base de datos
+- **Inertia.js** - Para SPA sin API
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Frontend
+- **Vue.js 3** - Framework JavaScript
+- **TypeScript** - Tipado estático
+- **Tailwind CSS** - Framework CSS
+- **Vite** - Build tool
+- **Element Plus** - Componentes UI
 
-## Laravel Sponsors
+### Herramientas de Desarrollo
+- **Laravel Breeze** - Autenticación
+- **Laravel Sanctum** - API Authentication
+- **Ziggy** - Generación de rutas para JavaScript
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Instalación
 
-### Premium Partners
+### Prerrequisitos
+- PHP 8.2 o superior
+- Composer
+- Node.js 18+ y npm
+- MySQL o MariaDB
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Pasos de Instalación
 
-## Contributing
+1. **Clonar el repositorio**
+   ```bash
+   git clone [URL_DEL_REPOSITORIO]
+   cd portafolio
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Instalar dependencias de PHP**
+   ```bash
+   composer install
+   ```
 
-## Code of Conduct
+3. **Instalar dependencias de Node.js**
+   ```bash
+   npm install
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Configurar variables de entorno**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## Security Vulnerabilities
+5. **Configurar la base de datos en `.env`**
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=portafolio
+   DB_USERNAME=tu_usuario
+   DB_PASSWORD=tu_password
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Ejecutar migraciones y seeders**
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   ```
 
-## License
+7. **Compilar assets**
+   ```bash
+   npm run build
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. **Iniciar el servidor**
+   ```bash
+   php artisan serve
+   ```
+
+## 📁 Estructura del Proyecto
+
+```
+portafolio/
+├── app/
+│   ├── Http/Controllers/     # Controladores
+│   ├── Models/              # Modelos Eloquent
+│   └── Providers/           # Proveedores de servicios
+├── resources/
+│   └── js/
+│       ├── Components/      # Componentes Vue reutilizables
+│       ├── Layouts/         # Layouts de la aplicación
+│       ├── Pages/           # Páginas principales
+│       └── types/           # Definiciones TypeScript
+├── database/
+│   ├── migrations/          # Migraciones de base de datos
+│   └── seeders/            # Seeders para datos de prueba
+└── public/
+    └── assets/             # Assets estáticos (imágenes, CSS, JS)
+```
+
+## 🎯 Funcionalidades Principales
+
+### Páginas Públicas
+- **Inicio**: Presentación personal y estadísticas
+- **Experiencias**: Historial laboral y proyectos destacados
+- **Sobre Mí**: Información personal y profesional
+- **Habilidades**: Tecnologías y competencias técnicas
+- **Portafolio**: Galería de proyectos realizados
+- **Contacto**: Formulario de contacto funcional
+
+### Panel de Administración
+- **Gestión de Proyectos**: CRUD completo para proyectos del portafolio
+- **Gestión de Contactos**: Visualización y gestión de mensajes recibidos
+- **Perfil de Usuario**: Configuración de cuenta de administrador
+
+## 🔧 Comandos Útiles
+
+```bash
+# Desarrollo
+npm run dev                    # Compilar assets en modo desarrollo
+php artisan serve             # Iniciar servidor de desarrollo
+
+# Producción
+npm run build                 # Compilar assets para producción
+php artisan config:cache      # Cachear configuración
+php artisan route:cache       # Cachear rutas
+php artisan view:cache        # Cachear vistas
+
+# Base de datos
+php artisan migrate           # Ejecutar migraciones
+php artisan migrate:rollback  # Revertir migraciones
+php artisan db:seed           # Ejecutar seeders
+
+# Limpieza
+php artisan cache:clear       # Limpiar cache
+php artisan config:clear      # Limpiar configuración cacheada
+```
+
+## 📧 Contacto
+
+- **Nombre**: Eduard Guevara
+- **Profesión**: Desarrollador Web
+- **Facebook**: [Eduard Guevara](https://www.facebook.com/eduard.guevara.cristovive/)
+- **GitHub**: [guevaraeduard](https://github.com/guevaraeduard)
+- **Instagram**: [guevaraeduard](https://www.instagram.com/guevaraeduard/)
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría hacer.
+
+---
+
+**Desarrollado con ❤️ por Eduard Guevara**

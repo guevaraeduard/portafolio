@@ -3,7 +3,8 @@ import { createInertiaApp, Head } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, DefineComponent, h } from "vue";
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/src/js';
-
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
@@ -13,6 +14,7 @@ createInertiaApp({
 		createApp({ render: () => h(App, props) })
 			.use(plugin)
 			.use(ZiggyVue)
+			.use(ElementPlus)
 			.component("Head", Head)
 			.mount(el);
 	},

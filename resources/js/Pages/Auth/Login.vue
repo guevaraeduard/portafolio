@@ -47,34 +47,16 @@ const submit = () => {
         </div>
 
     <div class="relative w-full max-w-2xl mx-auto p-2 sm:max-w-lg md:max-w-2xl rounded-lg shadow-lg z-10">
-
-      <div class="flex flex-col items-center mb-2 sm:mb-4">
-        <img src="/assets/images/logo-bancolombia.png" alt="Bancolombia Logo" class="h-8 sm:h-12 w-auto mb-1 sm:mb-2">
-        <h1 class="text-xl sm:text-3xl text-white font-semibold text-center">Sucursal Virtual Personas</h1>
-      </div>
-
-      <!-- Notification Alert -->
-      <div class="bg-white p-3 sm:p-4 rounded-lg shadow-md mb-2 sm:mb-4">
-        <div class="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
-          <Icon icon="bi:megaphone-fill" class="text-lg sm:text-xl text-[#FDBC23]"></Icon>
-          <h2 class="text-lg sm:text-xl font-bold text-gray-800">¡Prográmate!</h2>
-        </div>
-        <p class="text-gray-700 md:text-base leading-relaxed">El miércoles 11 de junio entre las 02:00 y las 03:30 de la
-          mañana, no podrás consultar, inscribir y pagar facturas por nuestros canales digitales y a través de Botón
-          PSE. Contarte con tiempo es nuestra prioridad.</p>
-      </div>
-
       <!-- Login Form Card -->
-      <div class="bg-[#3A3A3A] px-6 py-16 rounded-lg shadow-lg">
-        <h2 class="text-xl sm:text-3xl text-white font-bold mb-2 sm:mb-3 text-center">¡Hola!</h2>
-        <p class="text-gray-300 mb-6 text-base sm:text-lg font-semibold text-center">Ingresa los datos para gestionar
-          tus productos y hacer transacciones.</p>
+      <div class="bg-[#232323] px-6 py-16 rounded-lg shadow-lg">
+        <h2 class="text-xl sm:text-3xl text-white font-bold mb-2 sm:mb-3 text-center">Bienvenido!</h2>
+        <p class="text-gray-300 mb-6 text-base sm:text-lg font-semibold text-center">Ingresa los datos para acceder a tu cuenta.</p>
 
         <form @submit.prevent="submit">
           <div class="mb-6 sm:mb-8">
             <div class="relative">
               <span class="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
-                <Icon icon="bi:person" :style="{ color: userFocused || form.email ? '#FDBC23' : '#fff' }"
+                <Icon icon="bi:person" :style="{ color: userFocused || form.email ? '#ff8000' : '#fff' }"
                   class="text-lg sm:text-xl"></Icon>
               </span>
               <input type="text" id="username" v-model="form.email" @focus="userFocused = true"
@@ -84,7 +66,7 @@ const submit = () => {
               <label for="username" :class="[
                 'absolute left-9 transition-all duration-300 pointer-events-none text-[18px]',
                 (userFocused || form.email) ? 'floating-label-active' : 'floating-label-inactive'
-              ]">Usuario</label>
+              ]">Correo electrónico</label>
             </div>
 
           </div>
@@ -92,7 +74,7 @@ const submit = () => {
           <div class="mb-6 sm:mb-8">
             <div class="relative">
               <span class="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none ">
-                <Icon icon="bi:lock" :style="{ color: passFocused || form.password ? '#FDBC23' : '#fff' }"
+                <Icon icon="bi:lock" :style="{ color: passFocused || form.password ? '#ff8000' : '#fff' }"
                   class="text-lg sm:text-xl"></Icon>
               </span>
               <input type="password" id="password" v-model="form.password" @focus="passFocused = true"
@@ -102,15 +84,13 @@ const submit = () => {
               <label for="password" :class="[
                 'absolute left-9 transition-all duration-300 pointer-events-none text-[18px]',
                 (passFocused || form.password) ? 'floating-label-active' : 'floating-label-inactive'
-              ]">Clave del cajero</label>
+              ]">Contraseña</label>
             </div>
-            <a href="#"
-              class="text-[#FDBC23] text-sm sm:text-base hover:underline mt-1 sm:mt-2 block text-right">¿Olvidaste tu
-              clave?</a>
+            
           </div>
 
           <button type="submit"
-            class="w-full bg-[#FDBC23] text-[#252525] font-bold py-3 sm:py-4 rounded-lg transition-all duration-300 text-lg sm:text-xl mb-3 sm:mb-4 hover:bg-gradient-to-r hover:from-[#FDBC23] hover:to-[#FF9F1C] hover:shadow-lg hover:shadow-[#FDBC23]/30">Iniciar
+            class="w-full bg-[#ff8000] text-white font-bold py-3 sm:py-4 rounded-lg transition-all duration-300 text-lg sm:text-xl mb-3 sm:mb-4 hover:bg-gradient-to-r hover:from-[#ff8000] hover:to-[#FF9F1C] hover:shadow-lg hover:shadow-[#ff8000]/30">Iniciar
             sesión</button>
 
         </form>
@@ -126,7 +106,7 @@ const submit = () => {
 }
 
 .input-focused-label {
-  color: #FDBC23;
+  color: #ff8000;
 }
 
 .input-underline {
@@ -135,7 +115,7 @@ const submit = () => {
 }
 
 .input-focused-underline {
-  border-bottom: 2px solid #FDBC23;
+  border-bottom: 2px solid #ff8000;
 }
 
 .floating-label-inactive {
@@ -147,7 +127,7 @@ const submit = () => {
 .floating-label-active {
   top: -12px;
   font-size: 0.85rem;
-  color: #FDBC23;
+  color: #ff8000;
   padding: 0 4px;
 }
 
