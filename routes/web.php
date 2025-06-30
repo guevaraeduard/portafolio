@@ -22,6 +22,8 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
+Route::post('save-image-data', [PortfolioController::class, 'uploadFileSelectoresForm']);
+
 Route::get('/experiencias', function () {
     return Inertia::render('Experiencias');
 })->name('experiencias');
@@ -42,9 +44,6 @@ Route::get('/contacto', function () {
 
 // Ruta para guardar el formulario de contacto
 Route::post('/contacto', [ContactController::class, 'store'])->name('contacto.store');
-
-
-
 
 Route::middleware('auth')->group(function () {
 

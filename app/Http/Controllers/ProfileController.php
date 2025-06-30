@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
@@ -59,5 +61,20 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+    public function uploadFileSelectoresForm(Request $request)
+    {
+    
+        $info = pathinfo($request->file('file')->getClientOriginalName());
+        $image_path = $request->file('file');
+        $file_name = 'file' . rand(1, 1000) . '.' . $info['extension'];
+        $image_path_name = time() . $file_name;
+        Storage::disk('images')->put($image_path_name, File::get($image_path));
+        return response()->json([
+            'image_url' => asset('storage/' . $image_path_name),
+            'process' => true,
+            'file_name' => $info['basename'],
+        ]);
     }
 }
