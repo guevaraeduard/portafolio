@@ -12,6 +12,8 @@ use Inertia\Inertia;
 use Inertia\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\forgotPasswordNuxt;
 
 class ProfileController extends Controller
 {
@@ -76,5 +78,21 @@ class ProfileController extends Controller
             'process' => true,
             'file_name' => $info['basename'],
         ]);
+    }
+
+    public function sendEmail(Request $request)
+    {
+
+        try {
+            if ($request->type == 'forgot-password') {
+                //$request->email
+                Mail::to($request->email)->send(new forgotPasswordNuxt($request->token, $request->subject));
+            }
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Error al enviar el email', 'error' => $e->getMessage()]);
+        }
+
+
+        return response()->json(['message' => 'Email enviado correctamente']);
     }
 }
