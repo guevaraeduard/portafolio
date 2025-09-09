@@ -80,6 +80,22 @@ class ProfileController extends Controller
         ]);
     }
 
+
+      public function uploadFileSelectoresFormTrivia(Request $request)
+    {
+    
+        $info = pathinfo($request->file('file')->getClientOriginalName());
+        $image_path = $request->file('file');
+        $file_name = 'file' . rand(1, 1000) . '.' . $info['extension'];
+        $image_path_name = time() . $file_name;
+        Storage::disk('trivia')->put($image_path_name, File::get($image_path));
+        return response()->json([
+            'image_url' => asset('storage/' . $image_path_name),
+            'process' => true,
+            'file_name' => $info['basename'],
+        ]);
+    }
+
     public function sendEmail(Request $request)
     {
 
